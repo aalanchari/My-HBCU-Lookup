@@ -18,23 +18,19 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <Home /> // Home page at root
+  },
+  {
     path: "/profile/:profileID",
-  element: <Profile />,       //App.tsx file
-    //errorElement: <Error />
+    element: <Profile />
   },
-
   {
-    path:"/home",
-    element: <Home />       //Home.tsx file
+    path: "/explore",
+    element: <Explore />
   },
-    
   {
-    path:"/explore",
-    element: <Explore />       //Explore.tsx file
-  },
-
-  { 
-    path: '*', 
+    path: '*',
     element: <NotFound />
   }
 
